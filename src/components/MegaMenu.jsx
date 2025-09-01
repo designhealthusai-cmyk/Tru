@@ -50,19 +50,19 @@ export default function MegaMenu({ isOpen }) {
         { name: "Joint Pain Management", href: "/services/pain-management-and-recovery/joint-pain" },
         { name: "Sports Recovery", href: "/services/pain-management-and-recovery/sports" },
         { name: "Cryotherapy", href: "/services/pain-management-and-recovery/cryotherapy" },
-        { name: "Localized Cryotherapy", href: "/fitness" },
+        { name: "Localized Cryotherapy", href: "/services/pain-management-and-recovery/localized-cryotherapy" },
       ]
     },
     {
       category: { name: "Women-centric Health Interventions", href: "/services/women-centric-health-interventions" },
       subServices: [
-       { name: "PCOS and PCOD", href: "/nutrition" },
-        { name: "Menopause-Related Issues", href: "/weight-management" },
-        { name: "Hormone Balancing", href: "/fitness" },
-        { name: "Uterine Removal Complications in Older Women", href: "/nutrition" },
-        { name: "HPV Vaccines", href: "/weight-management" },
-        { name: "UTIs (Urinary Tract Infections)", href: "/fitness" },
-        { name: "Osteoporosis", href: "/fitness" },
+       { name: "PCOS and PCOD", href: "#" },
+        { name: "Menopause-Related Issues", href: "#" },
+        { name: "Hormone Balancing", href: "#" },
+        { name: "Uterine Removal Complications in Older Women", href: "#" },
+        { name: "HPV Vaccines", href: "#" },
+        { name: "UTIs (Urinary Tract Infections)", href: "#" },
+        { name: "Osteoporosis", href: "#" },
       ]
     },
     {
@@ -93,11 +93,11 @@ export default function MegaMenu({ isOpen }) {
     {
       category: { name: "Mental Health and Counselling", href: "/services/mental-health-and-counselling" },
       subServices: [
-        { name: "Mental Health Peptides", href: "/nutrition" },
-        { name: "Chronic Illness counselling and support (Cancer specifically)", href: "/weight-management" },
-        { name: "Nutrition Management protocols", href: "/fitness" },
-        { name: "Psychologist sessions", href: "/fitness" },
-        { name: "Paediatric Counselling (ADHD and other issues)", href: "/nutrition" },
+        { name: "Mental Health Peptides", href: "/services/mental-health-and-counselling/mental-health-peptides" },
+        { name: "Chronic Illness counselling and support (Cancer specifically)", href: "/services/mental-health-and-counselling" },
+        { name: "Nutrition Management protocols", href: "/services/mental-health-and-counselling" },
+        { name: "Psychologist sessions", href: "/services/mental-health-and-counselling" },
+        { name: "Paediatric Counselling (ADHD and other issues)", href: "/services/mental-health-and-counselling" },
       ]
     },
     {

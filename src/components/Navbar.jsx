@@ -110,6 +110,19 @@ export default function Navbar() {
       ],
     },
     {
+      category: "Pain Management and Recovery",
+      href: "/services/pain-management-and-recovery",
+      subServices: [
+      { name: "Chronic Back Ache Induced by Uric Acid", href: "/services/pain-management-and-recovery/chronic-back" },
+        { name: "Arthritis", href: "/services/pain-management-and-recovery/arthritis" },
+        { name: "Accident Recovery", href: "/services/pain-management-and-recovery/accident-recovery" },
+        { name: "Joint Pain Management", href: "/services/pain-management-and-recovery/joint-pain" },
+        { name: "Sports Recovery", href: "/services/pain-management-and-recovery/sports" },
+        { name: "Cryotherapy", href: "/services/pain-management-and-recovery/cryotherapy" },
+        { name: "Localized Cryotherapy", href: "/services/pain-management-and-recovery/localized-cryotherapy" },
+      ],
+    },
+    {
       category: "Ergogenic Medicine",
       href: "/services/ergogenic-medicine",
       subServices: [

@@ -98,7 +98,7 @@ export default function ContactForm() {
 
     try {
       const response = await fetch(
-        "https://trupeakhealth.in/masterlogin/wp-json/custom/v1/submit-inquiry",
+        "https://backend.trupeakhealth.in/wp-json/custom/v1/submit-inquiry",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

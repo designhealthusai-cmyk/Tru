@@ -228,7 +228,7 @@ const ContactFormSection = () => {
 
     try {
       const response = await fetch(
-        "https://trupeakhealth.in/masterlogin/wp-json/custom/v1/submit-contact",
+        "https://backend.trupeakhealth.in/wp-json/custom/v1/submit-contact",
         {
           method: "POST",
           headers: {
@@ -387,7 +387,7 @@ const ContactFormSection = () => {
           )}
 
           {/* Submit Button */}
-          <div className="flex justify-center sm:justify-start">
+          <div className="flex justify-center sm:justify-center">
             <button
               type="submit"
               disabled={loading}
