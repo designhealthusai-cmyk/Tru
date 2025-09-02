@@ -62,7 +62,7 @@ module.exports = {
   ],
       colors: {
         one: "#E1C78F",  
-        two: "#233452",  
+        two: "#18243A",  
         three: "#2C886A", 
         four: "#E1C78F",
       },

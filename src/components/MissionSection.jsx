@@ -2,7 +2,7 @@
 import React from "react";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-
+import Link from "next/link";
 const MissionSection = () => {
   const { ref, inView } = useInView({
     threshold: 0.3,
@@ -16,14 +16,22 @@ const MissionSection = () => {
   {/* Left Content */}
   <div className="flex-1 w-full md:max-w-[50%] z-20 text-center md:text-left space-y-6 md:space-y-10">
     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold max-w-2xl mx-auto md:mx-0 leading-tight">
-      Welcome to <span className="text-[#2c886a]">Trupeak</span>
+      Welcome to <span className="text-three">Trupeak</span>
     </h2>
 
-    <p className="font-body text-[#1a2233] text-sm sm:text-base md:text-lg lg:text-xl font-medium max-w-2xl mx-auto md:mx-0 pb-8 md:pb-12">
+    <p className="font-body text-[#1a2233] text-sm sm:text-base md:text-lg lg:text-xl font-medium max-w-2xl mx-auto md:mx-0 pb-4 md:pb-4">
       Restorative healthcare centers focused on altering the biological blueprint of individuals so they can live, move, and age with confidence. Every program and protocol is science based, backed by evidence and clinically proven with publications in reputed global medical journals. Every result is tracked in real time through our AI-enabled, intuitive, data driven, and software-backed platform.
-
+       <br></br>
+       {/* <Link
+      href="/about-us"
+      className="inline-block px-6 py-2 bg-three text-white font-semibold rounded-full shadow-md hover:bg-[#246f56] transition-colors duration-300 mt-12"
+    >
+      Know More
+    </Link> */}
     </p>
-
+    
+    
+  
     {/* Stats Card */}
     <div
   ref={ref}   // ⬅️ attach the ref here

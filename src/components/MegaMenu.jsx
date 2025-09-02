@@ -113,7 +113,7 @@ export default function MegaMenu({ isOpen }) {
 
   const quickLinks = [
     { title: "Call Us", href: "tel:9820373373" },
-    { title: "Book an Appointment", href: "/contact" },
+    { title: "Book an Appointment", href: "/book-an-appointment" },
     { title: "Locations", href: "/locations" }
   ];
 
@@ -188,36 +188,38 @@ export default function MegaMenu({ isOpen }) {
 
         {/* Third Column - Quick Links */}
         <div>
-          <h3 className="font-bold text-lg mb-4">Quick Links</h3>
-          <ul className="space-y-2 inline-flex flex-col items-stretch">
-            {quickLinks.map((link, idx) => (
-              <li key={idx} className="w-full">
-                <Link
-                  href={link.href}
-                  className="inline-flex items-center justify-between gap-2 px-4 py-2 bg-three text-white rounded-3xl hover:bg-two/90 transition-colors duration-200 w-full"
-                >
-                  <span>{link.title}</span>
-                  <div className="bg-white p-1 rounded-full inline-flex items-center justify-center w-6 h-6">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={2}
-                      stroke="green"
-                      className="w-4 h-4"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M13.5 4.5L21 12l-7.5 7.5M3 12h18"
-                      />
-                    </svg>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+  <h3 className="font-bold text-lg mb-4">Quick Links</h3>
+  <ul className="space-y-2 inline-flex flex-col items-stretch">
+    {quickLinks.map((link, idx) => (
+      <li key={idx} className="w-full">
+        <Link
+          href={link.href}
+          onClick={() => onClose && onClose()} // ✅ Close menu on click
+          className="inline-flex items-center justify-between gap-2 px-4 py-2 bg-three text-white rounded-3xl hover:bg-two/90 transition-colors duration-200 w-full"
+        >
+          <span>{link.title}</span>
+          <div className="bg-white p-1 rounded-full inline-flex items-center justify-center w-6 h-6">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={2}
+              stroke="green"
+              className="w-4 h-4"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13.5 4.5L21 12l-7.5 7.5M3 12h18"
+              />
+            </svg>
+          </div>
+        </Link>
+      </li>
+    ))}
+  </ul>
+</div>
+
 
       </div>
     </div>

@@ -16,7 +16,7 @@ export default function Navbar() {
   const timeoutRef = useRef(null);
   const quickLinks = [
     { title: "Call Us", href: "tel:9820373373" },
-    { title: "Book an Appointment", href: "/contact" },
+    { title: "Book an Appointment", href: "/book-an-appointment" },
     { title: "Locations", href: "/locations" },
   ];
   // Scroll detection for background change

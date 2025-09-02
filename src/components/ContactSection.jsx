@@ -26,8 +26,8 @@ export default function ContactSection() {
         {/* Email */}
         <div className="bg-two text-white px-12 py-8 flex items-center justify-between gap-4 rounded-r-3xl  ">
           <div className="flex-1">
-            <p className="text-xl font-bold">info@trupeakhealth.in</p>
-            <p className="text-lg mt-2">
+            <p className="text-sm font-bold sm:text-xl">info@trupeakhealth.in</p>
+            <p className="text-sm mt-2 sm:text-xl">
               Use this email for documentation, scheduling follow-ups, etc.
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function ContactSection() {
           </div>
           <div>
             <p className="text-sm font-bold sm:text-xl">9820 373 373</p>
-            <p className="text-lg mt-2">
+            <p className="text-sm mt-2 sm:text-xl">
               Call us to connect with our front desk or care coordinator.
             </p>
           </div>
@@ -79,8 +79,8 @@ Dadar West, Mumbai - 400028</p>
             <Clock className="text-green-600 w-12 h-12" style={iconStyle} />
           </div>
           <div>
-            <p className="text-xl font-bold">Monday to Sunday:</p>
-            <p className="text-lg font-bold">9:00 AM – 9:00 PM</p>
+            <p className="text-sm font-bold sm:text-xl">Monday to Sunday:</p>
+            <p className="text-sm font-bold sm:text-xl">9:00 AM – 9:00 PM</p>
             
           </div>
         </div>

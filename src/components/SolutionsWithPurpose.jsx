@@ -123,7 +123,7 @@ const GSAPPopOutCards = () => {
       description:
         "NAD⁺ therapy, targeted peptides, and intravenous treatments crafted to enhance vitality, support immune function, and promote cellular recovery.",
       img: "/images/home-cards/card-1.webp",
-      link: "/services/regenerative-therapies/restorative-medicine",
+      link: "/services/regenerative-therapies",
     },
     {
       title: "CEO Protocol",
@@ -137,28 +137,28 @@ const GSAPPopOutCards = () => {
       description:
         "Advanced immune support and longevity strategies for lasting health and resilience.",
       img: "/images/home-cards/card-3.webp",
-      link: "#",
+      link: "/services/immunity-and-longevity",
     },
     {
       title: "Women-Centric Health",
       description:
         "Personalized care for hormonal health, recovery, and vitality at every stage of life.",
       img: "/images/home-cards/card-4.webp",
-      link: "#",
+      link: "/services/women-centric-health-interventions",
     },
     {
       title: "Beauty & Aesthetics",
       description:
         "Cutting-edge regenerative aesthetics to enhance natural beauty and slow visible aging.",
       img: "/images/home-cards/card-5.webp",
-      link: "#",
+      link: "/services/beauty-aesthetics",
     },
     {
       title: "Pain Management & Recovery",
       description:
         "Targeted therapies to restore mobility, reduce pain, and accelerate functional recovery.",
       img: "/images/home-cards/card-6.webp",
-      link: "#",
+      link: "/services/pain-management-and-recovery",
     },
   ];
 

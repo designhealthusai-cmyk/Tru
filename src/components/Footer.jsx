@@ -65,21 +65,32 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Company</h4>
             <ul className="space-y-2 text-base text-white/80">
               <li>
-                <Link href="#">About</Link>
+                <Link href="/bout-us">About</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">Careers</Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="#">Locations</Link>
+                <Link href="/locations">Locations</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">Media & Press</Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="#">Success Stories</Link>
-              </li>
+              </li> */}
             </ul>
+            <div className="flex gap-6 items-center text-[#C5B179] text-2xl mt-2 lg:mt-4 ">
+    <a href="https://www.instagram.com/trupeakhealth?utm_source=ig_web_button_share_sheet&igsh=bmkycG4xajZjYmN4" aria-label="Instagram" className="hover:opacity-70">
+      <FaInstagram />
+    </a>
+    {/* <a href="https://www.linkedin.com/company/trupeakhealth/?viewAsMember=true" aria-label="Facebook" className="hover:opacity-70">
+      <FaFacebookF />
+    </a> */}
+    <a href="https://www.linkedin.com/company/trupeakhealth/?viewAsMember=true " aria-label="LinkedIn" className="hover:opacity-70">
+      <FaLinkedinIn />
+    </a>
+  </div>
           </div>
 
           {/* Column 2: Services */}
@@ -87,7 +98,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Services</h4>
             <ul className="space-y-2 text-base text-white/80">
               <li>
-                <Link href="#">At-Home Services</Link>
+                <Link href="/at-home">At-Home Services</Link>
               </li>
               <li>
                 <Link href="#">Memberships</Link>
@@ -105,13 +116,13 @@ const Footer = () => {
               <li>
                 <Link href="#">Terms of Service</Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href="#">Shipping Policy</Link>
               </li>
               <li>
                 <Link href="#">Refund Policy</Link>
-              </li>
-              <li>
+              </li> */}
+              {/* <li>
                 <Link href="#">Accessibility</Link>
               </li>
               <li>
@@ -119,7 +130,7 @@ const Footer = () => {
                   GDPR / HIPAA / SOC 2 / <br />
                   ISO / FDA Compliance
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -170,7 +181,7 @@ const Footer = () => {
         </div>
 
         {/* Footer bottom note & social icons */}
-        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
+        {/* <div className="border-t border-white/10 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
           <div className="text-xs text-white/50 text-center lg:text-left">
             © {new Date().getFullYear()} Trupeak Health. All rights reserved.
           </div>
@@ -185,8 +196,40 @@ const Footer = () => {
               <FaLinkedinIn />
             </a>
           </div>
-        </div>
-      </div>
+          
+        </div> */}
+        <div className="border-t border-white/10 mt-12 pt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
+  {/* ✅ Left */}
+  <div className="text-sm text-white/50 text-center lg:text-left">
+    © {new Date().getFullYear()} Trupeak Health. All rights reserved.
+  </div>
+
+  {/* ✅ Center (optional) */}
+  <div className="text-sm text-white/50 text-center">
+    Designed and developed by{" "}
+    <a
+      href="https://healthus.ai"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-[#C5B179] hover:underline"
+    >
+      Healthus.ai
+    </a>
+  </div>
+
+  {/* ✅ Right (Social Icons Example) */}
+
+</div>
+
+
+  {/* Right: Social Icons */}
+  
+</div>
+
+
+
+
+     
     </footer>
   );
 };
