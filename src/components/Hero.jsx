@@ -67,7 +67,7 @@ const Hero = () => {
         <h3 className="mt-8 text-base sm:text-lg md:text-xl lg:text-3xl font-medium text-white">
           Let’s begin your healthcare transformation journey
         </h3>
-        <div className="mt-6">
+        {/* <div className="mt-6">
           <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#fff] rounded-full flex items-center justify-center shadow-xl">
             <svg
               width="24"
@@ -86,7 +86,7 @@ const Hero = () => {
               />
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
 
       {/* 🔻 Bottom Border */}

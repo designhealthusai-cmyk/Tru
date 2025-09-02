@@ -14,7 +14,11 @@ export default function Navbar() {
 
   const pathname = usePathname();
   const timeoutRef = useRef(null);
-
+  const quickLinks = [
+    { title: "Call Us", href: "tel:9820373373" },
+    { title: "Book an Appointment", href: "/contact" },
+    { title: "Locations", href: "/locations" },
+  ];
   // Scroll detection for background change
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -240,126 +244,171 @@ export default function Navbar() {
       </nav>
 
       {/* MOBILE MENU */}
-      <div
-        className={`fixed top-20 left-0 w-full h-screen bg-white z-40 p-6 overflow-y-auto transition-all duration-300 ${
-          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
-        {!activeMobileSubmenu ? (
-          /* Main mobile menu */
-          <ul className="space-y-6 text-lg font-semibold">
-            <li>
-              <button
-                className="w-full flex justify-between items-center text-left"
-                onClick={() => setActiveMobileSubmenu("services")}
+      {/* MOBILE MENU */}
+<div
+  className={`flex  flex-col justify-between fixed top-24 left-0 w-full h-screen bg-white z-40 p-6 overflow-y-auto transition-all duration-300 ${
+    isMobileMenuOpen ? "translate-x-0" : "-translate-x-full"
+  }`}
+>
+  {!activeMobileSubmenu ? (
+    /* Main mobile menu */
+    <>
+      <ul className="space-y-6 text-lg font-semibold">
+        <li className="flex justify-between items-center">
+          <button
+            className="w-full flex justify-between items-center text-left"
+            onClick={() => setActiveMobileSubmenu("services")}
+          >
+            <span>Services</span>
+          
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  
+          </button>
+        </li>
+        <li className="flex justify-between items-center">
+          <Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>
+            At-Home
+          </Link>
+          <Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  </Link>
+        </li>
+        <li className="flex justify-between items-center">
+          <Link href="/locations" onClick={() => setMobileMenuOpen(false)}>
+            Location
+          </Link>
+          <Link href="/locations" onClick={() => setMobileMenuOpen(false)}>
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  </Link>
+        </li>
+        <li className="flex justify-between items-center">
+          <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
+            Blogs
+          </Link>
+         <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  </Link>
+        </li>
+        <li className="flex justify-between items-center">
+  <Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>
+    About Us
+  </Link>
+  <Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  </Link>
+</li>
+        <li className="flex justify-between items-center">
+          <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+            Contact Us
+          </Link>
+          <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  </Link>
+        </li>
+      </ul>
+
+      {/* Quick Links Section */}
+      <div className="pt-8 pb-24 px-5 border-t border-gray-200 ">
+        <h3 className="text-lg font-bold mb-4 text-black">Quick Links</h3>
+        <ul className="space-y-4">
+          {quickLinks.map((link, idx) => (
+            <li key={idx}>
+              <Link
+                href={link.href}
+                onClick={() => setMobileMenuOpen(false)}
+                className="flex justify-between items-center bg-three text-white px-4 py-2 rounded-full shadow-md hover:bg-[#236956] transition"
               >
-                <span>Services</span>
-                <span className="flex items-center justify-center w-8 h-8 bg-gray-200 rounded-full">
+                <span>{link.title}</span>
+                <span className="bg-white text-three rounded-full w-7 h-7 flex items-center justify-center">
                   ➔
                 </span>
-              </button>
-            </li>
-            <li>
-              <Link href="/at-home" onClick={() => setMobileMenuOpen(false)}>
-                At-Home
               </Link>
             </li>
-            <li>
-              <Link href="/locations" onClick={() => setMobileMenuOpen(false)}>
-                Locations
-              </Link>
-            </li>
-            <li>
-              <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
-                FAQ
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
-                Blogs
-              </Link>
-            </li>
-            <li>
-              <Link href="/about-us" onClick={() => setMobileMenuOpen(false)}>
-                About Us
-              </Link>
-            </li>
-            
-            <li>
-              <Link
-                href="/contact"
-                className="bg-green-700 text-white px-4 py-2 rounded-full block text-center hover:bg-green-800 transition"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-        ) : activeMobileSubmenu === "services" && !activeServiceCategory ? (
-          /* Show service categories */
-          <div>
-            <button
-              className="mb-6 flex items-center gap-3 text-one font-bold"
-              onClick={() => setActiveMobileSubmenu(null)}
+          ))}
+        </ul>
+      </div>
+    </>
+  ) : activeMobileSubmenu === "services" && !activeServiceCategory ? (
+    /* Show service categories */
+    <div>
+      <button
+        className="mb-6 flex items-center gap-3 text-black font-bold"
+        onClick={() => setActiveMobileSubmenu(null)}
+      >
+        ← Back
+      </button>
+      <ul className="space-y-4">
+        {services.map((cat, idx) => (
+          <li key={idx} className="flex justify-between items-center">
+            <Link
+              href={cat.href}
+              className="text-lg font-bold text-gray-800"
+              onClick={() => setMobileMenuOpen(false)}
             >
-              ← Back
+              {cat.category}
+            </Link>
+            <button
+              className="ml-2 flex items-center justify-center w-6 h-6"
+              onClick={() => setActiveServiceCategory(cat.category)}
+            >
+             
+    <span className="flex items-center justify-center w-6 h-6">
+      <img src="/images/arr.svg" alt="arrow" className="w-4 h-4" />
+    </span>
+  
             </button>
-            <ul className="space-y-4">
-              {services.map((cat, idx) => (
-                <li key={idx} className="flex justify-between items-center">
+          </li>
+        ))}
+      </ul>
+    </div>
+  ) : (
+    /* Sub-services */
+    <div>
+      <button
+        className="mb-6 flex items-center gap-3 text-one font-bold"
+        onClick={() => setActiveServiceCategory(null)}
+      >
+        ← Back
+      </button>
+      {services
+        .filter((cat) => cat.category === activeServiceCategory)
+        .map((cat, idx) => (
+          <div key={idx}>
+            <h3 className="text-xl font-bold mb-3">{cat.category}</h3>
+            <ul className="ml-4 space-y-2">
+              {cat.subServices.map((sub, subIdx) => (
+                <li key={subIdx}>
                   <Link
-                    href={cat.href}
-                    className="text-lg font-bold text-gray-800"
-                    onClick={() => setMobileMenuOpen(false)}
+                    href={sub.href}
+                    className="block text-gray-600 hover:text-one text-sm"
+                    onClick={() => {
+                      setMobileMenuOpen(false);
+                      setActiveMobileSubmenu(null);
+                      setActiveServiceCategory(null);
+                    }}
                   >
-                    {cat.category}
+                    {sub.name}
                   </Link>
-                  <button
-                    className="ml-2 flex items-center justify-center w-6 h-6 bg-gray-200 rounded-full"
-                    onClick={() => setActiveServiceCategory(cat.category)}
-                  >
-                    ➔
-                  </button>
                 </li>
               ))}
             </ul>
           </div>
-        ) : (
-          /* Sub-services */
-          <div>
-            <button
-              className="mb-6 flex items-center gap-3 text-one font-bold"
-              onClick={() => setActiveServiceCategory(null)}
-            >
-              ← Back
-            </button>
-            {services
-              .filter((cat) => cat.category === activeServiceCategory)
-              .map((cat, idx) => (
-                <div key={idx}>
-                  <h3 className="text-xl font-bold mb-3">{cat.category}</h3>
-                  <ul className="ml-4 space-y-2">
-                    {cat.subServices.map((sub, subIdx) => (
-                      <li key={subIdx}>
-                        <Link
-                          href={sub.href}
-                          className="block text-gray-600 hover:text-one text-sm"
-                          onClick={() => {
-                            setMobileMenuOpen(false);
-                            setActiveMobileSubmenu(null);
-                            setActiveServiceCategory(null);
-                          }}
-                        >
-                          {sub.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-          </div>
-        )}
-      </div>
+        ))}
+    </div>
+  )}
+</div>
     </>
   );
 }

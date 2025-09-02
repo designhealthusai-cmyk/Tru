@@ -114,7 +114,7 @@ export default function MegaMenu({ isOpen }) {
   const quickLinks = [
     { title: "Call Us", href: "tel:9820373373" },
     { title: "Book an Appointment", href: "/contact" },
-    { title: "Location", href: "/locations" }
+    { title: "Locations", href: "/locations" }
   ];
 
   return (
@@ -126,7 +126,7 @@ export default function MegaMenu({ isOpen }) {
       <div className="max-w-screen-xl mx-auto p-6 grid grid-cols-3 gap-6">
         
         {/* First Column - Categories */}
-        <div className="border-r border-gray-200">
+        {/* <div className="border-r border-gray-200">
           {services.map((service, idx) => (
             <div
               key={idx}
@@ -139,10 +139,10 @@ export default function MegaMenu({ isOpen }) {
               </Link>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Second Column - Sub Services */}
-        <div className="border-r border-gray-200">
+        {/* <div className="border-r border-gray-200">
           {services[activeCategory]?.subServices.map((sub, subIdx) => (
             <Link
               key={subIdx}
@@ -152,7 +152,39 @@ export default function MegaMenu({ isOpen }) {
               {sub.name}
             </Link>
           ))}
-        </div>
+        </div> */}
+        <div className="border-r border-gray-200">
+  {services.map((service, idx) => (
+    <div
+      key={idx}
+      onMouseEnter={() => setActiveCategory(idx)}
+      className={`p-2 cursor-pointer transition-colors duration-200 rounded 
+        ${activeCategory === idx ? "bg-gray-100 font-semibold text-two" : "hover:bg-gray-50"}`}
+    >
+      <Link
+        href={service.category.href}
+        onClick={() => setMobileMenuOpen(false)}
+      >
+        {service.category.name}
+      </Link>
+    </div>
+  ))}
+</div>
+
+{/* Second Column - Sub Services */}
+<div className="border-r border-gray-200">
+  {services[activeCategory]?.subServices.map((sub, subIdx) => (
+    <Link
+      key={subIdx}
+      href={sub.href}
+      onClick={() => setMobileMenuOpen(false)}  // ✅ Close menu when clicked
+      className="block p-2 text-two hover:bg-gray-50 hover:text-one transition-colors duration-200"
+    >
+      {sub.name}
+    </Link>
+  ))}
+</div>
+
 
         {/* Third Column - Quick Links */}
         <div>
