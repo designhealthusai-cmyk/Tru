@@ -11,7 +11,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#1A2330] text-white">
+    <footer className="bg-[#1A2330] text-white py-16 sm:py-0">
       <div className="max-w-[1800px] mx-auto px-6 lg:px-20 pt-12 pb-4">
         {/* Row 1: Logo & Tagline */}
         <div className="flex flex-col lg:flex-row items-center lg:items-center justify-between mb-10 w-full gap-8">
@@ -207,14 +207,9 @@ const Footer = () => {
   {/* ✅ Center (optional) */}
   <div className="text-sm text-white/50 text-center">
     Designed and developed by{" "}
-    <a
-      href="https://healthus.ai"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-[#C5B179] hover:underline"
-    >
+    
       Healthus.ai
-    </a>
+    
   </div>
 
   {/* ✅ Right (Social Icons Example) */}
