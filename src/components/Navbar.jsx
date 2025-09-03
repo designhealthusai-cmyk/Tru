@@ -345,7 +345,7 @@ export default function Navbar() {
       </ul>
 
       {/* Quick Links Section */}
-      <div className="pt-8 pb-24 px-5 border-t border-gray-200 ">
+      {/* <div className="pt-8 pb-24 px-5 border-t border-gray-200 ">
         <h3 className="text-lg font-bold mb-4 text-black">Quick Links</h3>
         <ul className="space-y-4">
           {quickLinks.map((link, idx) => (
@@ -363,7 +363,7 @@ export default function Navbar() {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </>
   ) : activeMobileSubmenu === "services" && !activeServiceCategory ? (
     /* Show service categories */
