@@ -2,6 +2,7 @@ import React from "react";
 import { Montserrat, Nunito } from "next/font/google";
 import Script from "next/script";
 import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/NewComponent/FloatingButtons";
 import Navbar from "@/components/Navbar";
 import "./globals.css";
 
@@ -47,6 +48,7 @@ export default function RootLayout({ children }) {
 
         <Navbar />
         {children}
+         <FloatingButtons />
         <Footer />
 
         {/* Scroll Animation Script */}

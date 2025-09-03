@@ -54,15 +54,15 @@ export default function MegaMenu({ isOpen }) {
       ]
     },
     {
-      category: { name: "Women-centric Health Interventions", href: "/services/women-centric-health-interventions" },
+      category: { name: "Women Centric Health Interventions", href: "/services/women-centric-health-interventions" },
       subServices: [
-       { name: "PCOS and PCOD", href: "#" },
-        { name: "Menopause-Related Issues", href: "#" },
-        { name: "Hormone Balancing", href: "#" },
-        { name: "Uterine Removal Complications in Older Women", href: "#" },
-        { name: "HPV Vaccines", href: "#" },
-        { name: "UTIs (Urinary Tract Infections)", href: "#" },
-        { name: "Osteoporosis", href: "#" },
+       { name: "PCOS and PCOD", href: "/services/women-centric-health-interventions/pcos-and-pcod" },
+        { name: "Menopause Related Issues", href: "/services/women-centric-health-interventions/menopause-relate-issues" },
+        { name: "Hormone Balancing", href: "/services/women-centric-health-interventions/hormone-balancing" },
+        { name: "Uterine Removal Complications in Older Women", href: "/services/women-centric-health-interventions/uterine-removal-complications" },
+        { name: "HPV Vaccines", href: "/services/women-centric-health-interventions/hpv-vaccines" },
+        { name: "UTIs (Urinary Tract Infections)", href: "/services/women-centric-health-interventions/utis" },
+        { name: "Osteoporosis", href: "/services/women-centric-health-interventions/ostheoporosis" },
       ]
     },
     {
@@ -94,10 +94,10 @@ export default function MegaMenu({ isOpen }) {
       category: { name: "Mental Health and Counselling", href: "/services/mental-health-and-counselling" },
       subServices: [
         { name: "Mental Health Peptides", href: "/services/mental-health-and-counselling/mental-health-peptides" },
-        { name: "Chronic Illness counselling and support (Cancer specifically)", href: "/services/mental-health-and-counselling" },
-        { name: "Nutrition Management protocols", href: "/services/mental-health-and-counselling" },
-        { name: "Psychologist sessions", href: "/services/mental-health-and-counselling" },
-        { name: "Paediatric Counselling (ADHD and other issues)", href: "/services/mental-health-and-counselling" },
+        { name: "Chronic Illness counselling and support (Cancer specifically)", href: "/services/mental-health-and-counselling/chronic-Illness-counselling-and-support" },
+        { name: "Nutrition Management protocols", href: "/services/mental-health-and-counselling/nutrition-management-protocols" },
+        { name: "Psychologist sessions", href: "/services/mental-health-and-counselling/psychologist-sessions" },
+        { name: "Pediatric Counselling (ADHD and other issues)", href: "/services/mental-health-and-counselling/paediatric-counselling" },
       ]
     },
     {

@@ -84,9 +84,9 @@ const Footer = () => {
     <a href="https://www.instagram.com/trupeakhealth?utm_source=ig_web_button_share_sheet&igsh=bmkycG4xajZjYmN4" aria-label="Instagram" className="hover:opacity-70">
       <FaInstagram />
     </a>
-    {/* <a href="https://www.linkedin.com/company/trupeakhealth/?viewAsMember=true" aria-label="Facebook" className="hover:opacity-70">
+    <a href="https://www.facebook.com/people/TruPeak-Health/61577286037145/" aria-label="Facebook" className="hover:opacity-70">
       <FaFacebookF />
-    </a> */}
+    </a>
     <a href="https://www.linkedin.com/company/trupeakhealth/?viewAsMember=true " aria-label="LinkedIn" className="hover:opacity-70">
       <FaLinkedinIn />
     </a>
@@ -111,10 +111,10 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-4">Legal & Policies</h4>
             <ul className="space-y-2 text-base text-white/80">
               <li>
-                <Link href="#">Privacy Policy</Link>
+                <Link href="/privacy-policy">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="#">Terms of Service</Link>
+                <Link href="/terms-and-conditions">Terms and Conditions</Link>
               </li>
               {/* <li>
                 <Link href="#">Shipping Policy</Link>
@@ -168,12 +168,12 @@ const Footer = () => {
                   className="flex-shrink-0"
                 />
                 <span>
-                  Trupeak Health, Suite A/405,
+                  Trupeak Health, Suite A/405,Kohinoor Square,
                   <br />
-                  Kohinoor Square, Shivaji Park, OPP Shiv Sena Bhavan, Dadar
-                  West,
+                   Shivaji Park, OPP Shiv Sena Bhavan, Dadar
+                  West,Mumbai - 400028
                   <br />
-                  Mumbai - 400028
+                  
                 </span>
               </li>
             </ul>
