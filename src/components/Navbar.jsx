@@ -14,11 +14,11 @@ export default function Navbar() {
 
   const pathname = usePathname();
   const timeoutRef = useRef(null);
-  const quickLinks = [
-    { title: "Call Us", href: "tel:9820373373" },
-    { title: "Book an Appointment", href: "/book-an-appointment" },
-    { title: "Locations", href: "/locations" },
-  ];
+  // const quickLinks = [
+  //   { title: "Call Us", href: "tel:9820373373" },
+  //   { title: "Book an Appointment", href: "/book-an-appointment" },
+  //   { title: "Locations", href: "/locations" },
+  // ];
   // Scroll detection for background change
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
