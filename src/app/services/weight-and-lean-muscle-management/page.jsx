@@ -1,8 +1,9 @@
 import React from 'react';
+import CoreServices from '@/components/NewComponent/CoreServices';
 import ServicesHero from '@/components/ServicesHero';
 import Cards from '@/components/cards';
 import InfoSection from '@/components/InfoSection';
-import ContactSection from '@/components/ContactSection';
+
 import ContactForm from '@/components/ContactForm';
 import ProgramGoals from '@/components/ProgramGoals';
 import Imagetext from '@/components/Imagetext';
@@ -25,8 +26,8 @@ vitality.`,
     description: `Effective body transformation is more than lowering the digits on a scale. This program centers on strength development, metabolic enhancement, and muscle preservation, the foundations for lasting health and vitality.
 The framework builds on TrupeakTM CEO Protocol, first known as the SavenG Protocol. Developed for safe glucose control in intensive-care settings, its nurse-led structure emphasized precision and consistency. 
 TrupeakTM now applies the same disciplined, data-driven logic to preventive and performance care, regulating metabolism, supporting glucose balance, and improving body composition outside the hospital environment.`,
-    buttonText: "Know More",
-    buttonLink: "/services",
+    // buttonText: "Know More",
+    // buttonLink: "/services",
     images: [
       "/images/weight/2.jpg",
       "/images/weight/3.jpg",
@@ -47,35 +48,55 @@ diets.`,
   },
 
   cards: [
-    {
-      title: "Body Composition Monitoring",
-      description: ["Regular assessments measure fat mass, lean tissue, water balance, and limb-to-limb symmetry."],
-    },
-    {
-      title: "Comprehensive Medical Review",
-      description: ["A functional-medicine consultation explores thyroid status, insulin response, inflammation, adrenal stress, gut health, and lifestyle habits."],
-    },
-    {
-      title: "MuscleSound - Ultrasound Analysis",
-      description: ["This non-invasive scan evaluates muscle glycogen, hydration, and fat infiltration, providing real-time insight into tissue quality."],
-    },
-    {
-      title: "InBody 970 - Bioelectrical Impedance",
-      description: ["In seconds, this device delivers precise readings of visceral fat, segmental muscle, water distribution, and basal metabolic rate."],
-    },
-    {
-      title: "Q-NRG - Indirect Calorimetry",
-      description: ["By measuring oxygen use and carbon dioxide output, this test identifies your true resting energy expenditure."],
-    },
-    {
-      title: "Sleep Cycle Evaluation",
-      description: ["Wearable trackers, questionnaires, or sleep studies uncover poor sleep patterns, apnea, or hormonal disruptions."],
-    },
-    {
-      title: "Nutrition Planning and Counselling",
-      description: ["Meal plans depend on your clinical data, metabolic rate, and personal preferences."],
-    },
-    
+     {
+    title: "Body Composition Monitoring",
+    description: [
+      "Regular assessments measure fat mass, lean tissue, water balance, and limb-to-limb symmetry."
+    ],
+    link: "/services/weight-and-lean-muscle-management/weight-optimisation-tracking",
+  },
+  {
+    title: "Comprehensive Medical Review",
+    description: [
+      "A functional-medicine consultation explores thyroid status, insulin response, inflammation, adrenal stress, gut health, and lifestyle habits."
+    ],
+    link: "/services/weight-and-lean-muscle-management/functional-medicine-consultation",
+  },
+  {
+    title: "MuscleSound - Ultrasound Analysis",
+    description: [
+      "This non-invasive scan evaluates muscle glycogen, hydration, and fat infiltration, providing real-time insight into tissue quality."
+    ],
+    link: "/services/weight-and-lean-muscle-management/musclesound-analysis",
+  },
+  {
+    title: "InBody 970 - Bioelectrical Impedance",
+    description: [
+      "In seconds, this device delivers precise readings of visceral fat, segmental muscle, water distribution, and basal metabolic rate."
+    ],
+    link: "/services/weight-and-lean-muscle-management/inbody-970",
+  },
+  {
+    title: "Q-NRG - Indirect Calorimetry",
+    description: [
+      "By measuring oxygen use and carbon dioxide output, this test identifies your true resting energy expenditure."
+    ],
+    link: "/services/weight-and-lean-muscle-management/q-nrg",
+  },
+  {
+    title: "Sleep Cycle Evaluation",
+    description: [
+      "Wearable trackers, questionnaires, or sleep studies uncover poor sleep patterns, apnea, or hormonal disruptions."
+    ],
+    link: "/services/weight-and-lean-muscle-management/sleep-cycle-analysis",
+  },
+  {
+    title: "Nutrition Planning and Counselling",
+    description: [
+      "Meal plans depend on your clinical data, metabolic rate, and personal preferences."
+    ],
+    link: "/services/weight-and-lean-muscle-management/diet-management-and-nutrition-counselling",
+  },
   ],
 
   imageTextData: {
@@ -127,11 +148,11 @@ function Page() {
       <ServicesHero {...hero} />
       <InfoSection {...infoSection} />
       <ProgramGoals {...programGoals} />
-      <Cards data={cards} />
+     <CoreServices services={cards} title="Core Services" />
       <Imagetext {...imageTextData} />
       <StepsSection {...whatToExpectData} />
       <Content {...servicesPageData.contentData} />
-      <ContactSection />
+     
       <ContactForm />
     </div>
   );

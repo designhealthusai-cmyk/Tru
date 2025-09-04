@@ -1,4 +1,5 @@
-import fg from "fast-glob";
+
+  import fg from "fast-glob";
 
 export default async function sitemap() {
   const baseUrl = "https://www.trupeakhealth.in";
