@@ -9,8 +9,8 @@ export default function MegaMenu({ isOpen }) {
     {
       category: { name: "Regenerative Therapies", href: "/services/regenerative-therapies" },
       subServices: [
-        { name: "Restorative Medicine at Trupeak", href: "/services/regenerative-therapies/restorative-medicine" },
-        { name: "Cancer Nutrition at Trupeak", href: "/services/regenerative-therapies/cancer-nutrition" },
+        { name: "Restorative Medicine", href: "/services/regenerative-therapies/restorative-medicine" },
+        { name: "Cancer Nutrition", href: "/services/regenerative-therapies/cancer-nutrition" },
         { name: "Renal Nutrition", href: "/services/regenerative-therapies/renal-nutrition" },
         { name: "Hormone Optimisation Therapy", href: "/services/regenerative-therapies/hormone-optimisation-therapy" },
         { name: "Pain Management", href: "/services/regenerative-therapies/pain-management" },
@@ -28,7 +28,7 @@ export default function MegaMenu({ isOpen }) {
         { name: "MuscleSound Analysis (Muscle Ultrasound)", href: "/services/weight-and-lean-muscle-management/musclesound-analysis" },
         { name: "InBody 970: Bio-electrical Impedance Analysis", href: "/services/weight-and-lean-muscle-management/inbody-970" },
         { name: "Q-NRG: Indirect Calorimetry", href: "/services/weight-and-lean-muscle-management/q-nrg" },
-        { name: "Sleep Cycle Analysis at Trupeak", href: "/services/weight-and-lean-muscle-management/sleep-cycle-analysis" },
+        { name: "Sleep Cycle Analysis", href: "/services/weight-and-lean-muscle-management/sleep-cycle-analysis" },
         { name: "Diet Management and Nutrition Counselling", href: "/services/weight-and-lean-muscle-management/diet-management-and-nutrition-counselling" }
       ]
     },
