@@ -1,19 +1,19 @@
 import fg from "fast-glob";
 
 export default async function sitemap() {
-  const baseUrl = "https://www.trupeakhealth.in"; // your domain
+  const baseUrl = "https://www.trupeakhealth.in";
 
-  // Scan all page files in /app
+  // Find all page files
   const files = await fg(["./app/**/page.{js,jsx,ts,tsx}"], { dot: true });
 
   const routes = files.map((file) => {
     let path = file
       .replace(/^\.\/app/, "") // remove ./app
-      .replace(/\/page\.(js|jsx|ts|tsx)$/, "") // remove page.xxx
+      .replace(/\/page\.(js|jsx|ts|tsx)$/, "") // remove page extension
       .replace(/\/index$/, "") // clean index routes
-      .replace(/\\/g, "/");
+      .replace(/\\/g, "/"); // windows fix
 
-    if (path === "") path = "/"; // root path
+    if (path === "") path = "/"; // homepage
 
     return {
       url: `${baseUrl}${path}`,

@@ -94,15 +94,16 @@ export default function RootLayout({ children }) {
 
         {/* ✅ Google Analytics (GA4) */}
         <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-Z52CN1KPK0"
+          src="https://www.googletagmanager.com/gtag/js?id=G-FJH1LBK729"
           strategy="afterInteractive"
         />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-Z52CN1KPK0');
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FJH1LBK729');
           `}
         </Script>
       </head>
