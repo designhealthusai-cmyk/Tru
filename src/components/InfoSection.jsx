@@ -7,29 +7,25 @@ export default function InfoSection({ title, description, buttonText, buttonLink
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 px-6">
         
         {/* Images */}
-        <div className="flex flex-col sm:flex-row gap-6 md:w-1/2">
-          {images.length > 0 ? (
-            images.map((src, index) => (
-              <div key={index} className="relative flex-1 overflow-hidden rounded-tr-3xl rounded-bl-3xl">
-            {/* Image */}
-            <Image
-              src={src}
-              alt={`Info image ${index + 1}`}
-              width={300}
-              height={400}
-              className="object-cover object-center h-[500px] w-full rounded-tr-2xl rounded-bl-2xl "
-            />
+        <div className="flex gap-4 md:w-1/2">
+  {images.map((src, index) => (
+    <div
+      key={index}
+      className="relative flex-1 overflow-hidden rounded-tr-3xl rounded-bl-3xl"
+    >
+      <Image
+        src={src}
+        alt={`Info image ${index + 1}`}
+        width={300}
+        height={400}
+        className="object-cover object-center h-[400px] w-full rounded-tr-2xl rounded-bl-2xl"
+      />
+      <div className="absolute inset-0 bg-black bg-opacity-40 rounded-tr-2xl rounded-bl-2xl"></div>
+    </div>
+  ))}
+</div>
 
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black bg-opacity-40 rounded-tr-2xl rounded-bl-2xl"></div>
-          </div>
 
-
-            ))
-          ) : (
-            <p className="text-gray-500">No images available</p>
-          )}
-        </div>
 
         {/* Text Content */}
         <div className="md:w-1/2 text-left">

@@ -49,7 +49,7 @@ export default function FloatingButtons() {
         >
           {/* Phone Icon */}
           <div className="flex items-center justify-center w-[60px] h-[60px] shrink-0">
-            <Phone size={24} />
+            <Phone size={24} className="stroke-none" style={{ fill: "#2C886A" }}/>
           </div>
 
           {/* Text + Arrow */}
@@ -89,7 +89,9 @@ export default function FloatingButtons() {
     href="tel:+91 982-037-3373"
     className="flex-1 flex flex-col items-center justify-center bg-[#1D2B53] text-white py-2"
   >
-    <Phone size={20} />
+    <Phone size={20} className="stroke-none" style={{ fill: "#2C886A" }} />
+
+
     <span className="text-xs font-medium mt-1">Call Us</span>
   </a>
 </div>
