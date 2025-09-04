@@ -44,26 +44,26 @@ export default function FloatingButtons() {
 
         {/* Call Us */}
         <a
-          href="tel:+91 982-037-3373"
-          className="group relative flex items-center bg-[#1D2B53] text-white rounded-full shadow-lg border border-one overflow-hidden transition-all duration-300 ease-in-out w-[60px] hover:w-[200px] h-[60px]"
-        >
-          {/* Phone Icon */}
-          <div className="flex items-center justify-center w-[60px] h-[60px] shrink-0">
-            <Phone size={24} className="stroke-none" style={{ fill: "#2C886A" }}/>
-          </div>
+  href="tel:+91 982-037-3373"
+  className="group relative flex items-center bg-[#1D2B53] text-white rounded-full shadow-lg border border-one overflow-hidden transition-all duration-300 ease-in-out w-[60px] hover:w-[200px] h-[60px]"
+>
+  {/* Phone Icon */}
+  <div className="flex items-center justify-center w-[60px] h-[60px] flex-shrink-0">
+    <Phone size={24} className="stroke-none" style={{ fill: "#2C886A" }} />
+  </div>
 
-          {/* Text + Arrow */}
-          <div
-            className="flex items-center gap-2 ml-2 opacity-0 translate-x-[-10px] scale-95 
-                       group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100 
-                       transition-all duration-300"
-          >
-            <span className="whitespace-nowrap font-medium">Call Us</span>
-            <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white shrink-0">
-              <ArrowRight size={18} />
-            </div>
-          </div>
-        </a>
+  {/* Text + Arrow */}
+  <div className="flex items-center justify-between flex-1 px-4 transition-all duration-300
+                  opacity-0 translate-x-[-10px] scale-95 
+                  group-hover:opacity-100 group-hover:translate-x-0 group-hover:scale-100">
+    <span className="whitespace-nowrap font-medium">Call Us</span>
+    <div className="flex items-center justify-center w-8 h-8 rounded-full bg-green-600 text-white flex-shrink-0">
+      <ArrowRight size={18} />
+    </div>
+  </div>
+</a>
+
+
       </div>
 
       {/* Mobile Bottom Bar */}
