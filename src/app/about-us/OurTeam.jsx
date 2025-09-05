@@ -7,6 +7,7 @@ const leaders = [
       'Medical Director and creator of our Muscle and Metabolic optimization program known as the "CEO" Protocol',
     img: "/images/image1.jpg", // Replace with correct image path
   },
+  
   {
     name: "Dr. Vikramaditya Salvi",
     title: "Director of Dermatology and Aesthetic Surgery",
