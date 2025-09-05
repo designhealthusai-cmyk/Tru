@@ -1,79 +1,110 @@
-import React from "react";
+"use client";
+import Image from "next/image";
 
-const leaders = [
-  {
-    name: "Dr. Sanjith Saseedharan",
-    title:
-      'Medical Director and creator of our Muscle and Metabolic optimization program known as the "CEO" Protocol',
-    img: "/images/image1.jpg", // Replace with correct image path
-  },
-  
+const teamMembers = [
   {
     name: "Dr. Vikramaditya Salvi",
-    title: "Director of Dermatology and Aesthetic Surgery",
-    img: "/images/image1.jpg",
+    role1: "Founder & Director",
+    role: "Director of Dermatology and Aesthetic Surgery",
+    image: "/images/our-team/1.webp",
   },
   {
     name: "Dr. Amit Chakraborty",
-    title: "Head of Oncology Nutrition and Research",
-    img: "/images/image1.jpg",
+    role1: "Founder & Director",
+    role: "Head of Oncology Nutrition and Research",
+    image: "/images/our-team/2.webp",
   },
   {
-    name: "Dr Gaurav Mishra",
-    title: "Head of Obesity, Bariatric and General Surgery",
-    img: "/images/image1.jpg",
+    name: "Dr. Varun Tripathi",
+    role1: "Founder & Director",
+    role: "Head of Oncology Nutrition and Research",
+    image: "/images/our-team/3.webp",
+  },
+  {
+    name: "Dr. Sanjith Saseedharan",
+    role1: "Founder & Director",
+    role: "Medical Director and creator of our Muscle and Metabolic optimization program known as the “CEO” Protocol",
+    image: "/images/our-team/4.webp",
+  },
+  {
+    name: "Dr. Gaurav Mishra",
+    role1: "Founder & Director",
+    role: "Head of Obesity, Bariatric and General Surgery",
+    image: "/images/our-team/5.webp",
+  },
+  {
+    name: "",
+    role: "",
+    image: "/images/our-team/6.webp",
+    isOffice: true,
   },
 ];
 
-function OurTeam() {
+export default function OurTeam() {
   return (
-    <section className="max-w-7xl mx-auto px-4 md:px-8 py-12">
-      {/* Section Title */}
-      <h2 className="text-3xl font-bold text-two mb-2">Our Team</h2>
-      <div className="w-16 h-1 bg-three mb-6"></div>
-
-      {/* Intro Paragraph */}
-      <p className="text-two mb-8 max-w-6xl">
-       Trupeak is home to a collaborative group of medical professionals who believe in solving problems, not just managing them. Your care team may include physicians, registered dietitians and nutritionists, clinical psychologists, physiotherapists, and research scientists who work together, not in silos.
-      </p>
-
-      {/* Leaders Include */}
-      <h3 className="text-xl font-semibold text-gray-900 mb-6">
-        Leaders include:
-      </h3>
-
-      {/* Leaders Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-8 rounded-2xl">
-  {leaders.map((leader, index) => (
-    <div
-      key={index}
-      className="bg-two rounded-2xl shadow-md overflow-hidden flex flex-col items-center text-center"
-    >
-      <img
-        src={leader.img}
-        alt={leader.name}
-        className="w-full h-64 object-cover object-top border-8 mt-1 border-two rounded-xl
-        "
-      />
-      <div className="p-4">
-        <h4 className="text-[#FFB84D] font-semibold text-lg mb-2">
-          {leader.name}
-        </h4>
-        <p className="text-white text-sm">{leader.title}</p>
+    <section className="max-w-6xl mx-auto px-4 py-16">
+      {/* Heading */}
+      <div className="mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-two">Our Team</h2>
+        <div className="w-16 h-[3px] bg-[#2E9E79] mt-2 mb-6"></div>
+        <p className="text-gray-600 max-w-6xl">
+          Trupeak is home to a collaborative group of medical professionals who
+          believe in solving problems, not just managing them. Your care team
+          may include physicians, registered dietitians and nutritionists,
+          clinical psychologists, physiotherapists, and research scientists who
+          work together, not in silos.
+        </p>
+        <p className="mt-6 font-semibold text-lg">Leaders include:</p>
       </div>
-    </div>
-  ))}
+
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+  {teamMembers.map((member, idx) =>
+    member.isOffice ? (
+      // Office card
+      <div
+        key={idx}
+        className="relative rounded-3xl overflow-hidden h-96 md:h-64"
+      >
+        <Image
+          src={member.image}
+          alt="Trupeak Office"
+          fill
+          className="object-cover"
+        />
+      </div>
+    ) : (
+      // Doctor card
+      <div
+        key={idx}
+        className="bg-[#0F1C3F] rounded-3xl overflow-hidden flex flex-col md:flex-row items-start p-4 gap-4  md:h-64"
+      >
+        {/* Image */}
+        <div className="relative w-full md:w-48 h-60 md:h-full flex-shrink-0 rounded-xl overflow-hidden">
+          <Image
+            src={member.image}
+            alt={member.name}
+            fill
+            className="object-cover object-top"
+          />
+        </div>
+
+        {/* Text */}
+        <div className="flex flex-col justify-start overflow-hidden mt-4 md:mt-0 text-center md:text-left">
+          <h3 className="text-2xl md:text-2xl font-bold text-one">{member.name}</h3>
+          <p className="text-xl md:text-xl text-one mt-1 line-clamp-4 font-semibold">{member.role1}</p>
+          <p className="text-lg md:text-lg text-gray-200 mt-1 line-clamp-4">{member.role}</p>
+        </div>
+      </div>
+    )
+  )}
 </div>
 
 
-      {/* Closing Sentence */}
-      <p className="text-gray-700">
-        Together with a team of over 30 clinicians, they bring depth,
-        experience, and coordination to every plan we deliver.
-      </p>
+
+
+
+
+
     </section>
   );
 }
-
-export default OurTeam;
-
